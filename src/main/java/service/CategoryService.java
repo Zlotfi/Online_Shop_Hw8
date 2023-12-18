@@ -35,4 +35,12 @@ public class CategoryService {
         else
             System.out.println("ERROR");
     }
+
+    public void delete(int id) throws SQLException {
+        int result = categoryRepository.delete(id);
+        if (result != 0)
+            System.out.println("successfully deleted from database");
+        else
+            System.out.println("ERROR");
+    }
 }
