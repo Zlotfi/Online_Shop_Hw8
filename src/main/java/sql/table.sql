@@ -11,3 +11,18 @@ CREATE TABLE IF NOT EXISTS category(
     name VARCHAR(50) UNIQUE NOT NULL,
     description TEXT NOT NULL
 );
+
+-- CREATE TABLE IF NOT EXISTS product(
+--     id SERIAL PRIMARY KEY,
+--     name VARCHAR(50) NOT NULL,
+--     createDate VARCHAR(50) NOT NULL,
+--     category_id INTEGER REFERENCES category(id),
+--     brand_id INTEGER REFERENCES b
+-- )
+
+CREATE TABLE IF NOT EXISTS brand(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    website VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL
+);
