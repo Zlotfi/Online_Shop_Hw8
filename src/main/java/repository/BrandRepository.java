@@ -35,4 +35,12 @@ public class BrandRepository {
         int result = preparedStatement.executeUpdate();
         return result;
     }
+
+    public int delete(int id) throws SQLException {
+        String query = "DELETE FROM brand WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1,id);
+        int result = preparedStatement.executeUpdate();
+        return result;
+    }
 }
