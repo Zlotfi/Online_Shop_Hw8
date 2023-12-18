@@ -21,4 +21,18 @@ public class BrandService {
         else
             System.out.println("ERROR");
     }
+
+    public void updateBrand(int id) throws SQLException {
+        System.out.println("please enter your new brand name: ");
+        String name = scanner.nextLine();
+        System.out.println("please enter your new brand website: ");
+        String website = scanner.nextLine();
+        System.out.println("please enter your new brand description: ");
+        String description = scanner.nextLine();
+        int result = brandRepository.update(name,website,description,id);
+        if (result != 0)
+            System.out.println("successfully update to database");
+        else
+            System.out.println("OOps:(");
+    }
 }
