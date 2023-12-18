@@ -12,13 +12,13 @@ CREATE TABLE IF NOT EXISTS category(
     description TEXT NOT NULL
 );
 
--- CREATE TABLE IF NOT EXISTS product(
---     id SERIAL PRIMARY KEY,
---     name VARCHAR(50) NOT NULL,
---     createDate VARCHAR(50) NOT NULL,
---     category_id INTEGER REFERENCES category(id),
---     brand_id INTEGER REFERENCES b
--- )
+CREATE TABLE IF NOT EXISTS product(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    createDate VARCHAR(50) NOT NULL,
+    category_id INTEGER REFERENCES category(id),
+    brand_id INTEGER REFERENCES brand(id)
+);
 
 CREATE TABLE IF NOT EXISTS brand(
     id SERIAL PRIMARY KEY,
