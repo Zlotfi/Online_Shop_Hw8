@@ -24,4 +24,15 @@ public class BrandRepository {
         int result = preparedStatement.executeUpdate();
         return result;
     }
+
+    public int update(String name, String website, String description, int id) throws SQLException {
+        String query = "UPDATE brand SET name = ?, website = ?, description = ? WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1,name);
+        preparedStatement.setString(2,website);
+        preparedStatement.setString(3,description);
+        preparedStatement.setInt(4,id);
+        int result = preparedStatement.executeUpdate();
+        return result;
+    }
 }
