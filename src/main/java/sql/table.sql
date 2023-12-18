@@ -33,3 +33,11 @@ CREATE TABLE IF NOT EXISTS shareholder(
     phoneNumber VARCHAR(50) NOT NULL,
     nationalCode VARCHAR(50) UNIQUE NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS shareholder_brand(
+    brand_id INTEGER,
+    shareholder_id INTEGER,
+    PRIMARY KEY (brand_id, shareholder_id),
+    FOREIGN KEY (brand_id) REFERENCES brand(id),
+    FOREIGN KEY (shareholder_id) REFERENCES shareholder(id)
+);
