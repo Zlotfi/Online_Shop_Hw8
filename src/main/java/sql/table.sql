@@ -26,3 +26,10 @@ CREATE TABLE IF NOT EXISTS brand(
     website VARCHAR(50) NOT NULL,
     description TEXT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS shareholder(
+    id SERIAL primary key,
+    name VARCHAR(50) NOT NULL,
+    phoneNumber VARCHAR(50) NOT NULL,
+    nationalCode VARCHAR(50) UNIQUE NOT NULL
+);
