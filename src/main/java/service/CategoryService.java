@@ -5,8 +5,11 @@ import entity.User;
 import repository.CategoryRepository;
 
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class CategoryService {
+
+    Scanner scanner = new Scanner(System.in);
 
     private final CategoryRepository categoryRepository = new CategoryRepository();
 
@@ -17,6 +20,18 @@ public class CategoryService {
         int result = categoryRepository.save(category);
         if (result != 0)
             System.out.println(category.getName() + " successfully added to database");
+        else
+            System.out.println("ERROR");
+    }
+
+    public void updateCategory(int id) throws SQLException {
+        System.out.println("please enter your new name category: ");
+        String name = scanner.nextLine();
+        System.out.println("please enter your new description category: ");
+        String description = scanner.nextLine();
+        int result = categoryRepository.update(name, description, id);
+        if (result != 0)
+            System.out.println("successfully update to database");
         else
             System.out.println("ERROR");
     }
