@@ -19,7 +19,7 @@ public class CategoryRepository {
         String add = "INSERT INTO category (name, description) VALUES (?,?)";
         PreparedStatement preparedStatement = connection.prepareStatement(add);
         preparedStatement.setString(1,category.getName());
-        preparedStatement.setString(2,category.getDescription());.
+        preparedStatement.setString(2,category.getDescription());
         int result = preparedStatement.executeUpdate();
         return result;
     }
