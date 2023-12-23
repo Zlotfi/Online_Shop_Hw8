@@ -36,4 +36,12 @@ public class ShareholderService {
         else
             System.out.println("ERROR");
     }
+
+    public void delete(int id) throws SQLException {
+        int result = shareholderRepository.delete(id);
+        if (result != 0)
+            System.out.println("successfully deleted from database");
+        else
+            System.out.println("OOps!!");
+    }
 }
