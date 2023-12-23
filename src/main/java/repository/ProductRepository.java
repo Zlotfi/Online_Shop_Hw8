@@ -25,4 +25,16 @@ public class ProductRepository {
         int result = preparedStatement.executeUpdate();
         return result;
     }
+
+    public int update(String name, String createDate, int category_id, int brand_id, int id) throws SQLException {
+        String query = "UPDATE product SET name = ?, createDate = ?, category_id = ?, brand_id = ? WHERE id = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1,name);
+        preparedStatement.setString(2,createDate);
+        preparedStatement.setInt(3,category_id);
+        preparedStatement.setInt(4,brand_id);
+        preparedStatement.setInt(5,id);
+        int result = preparedStatement.executeUpdate();
+        return result;
+    }
 }
