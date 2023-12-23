@@ -38,4 +38,12 @@ public class ProductService {
         else
             System.out.println("OOps!?");
     }
+
+    public void delete(int id) throws SQLException {
+        int result = productRepository.delete(id);
+        if (result != 0)
+            System.out.println("successfully deleted from database");
+        else
+            System.out.println("ERROR");
+    }
 }
