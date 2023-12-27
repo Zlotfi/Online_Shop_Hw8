@@ -12,7 +12,7 @@ public class Menu {
     private final Scanner scanner = new Scanner(System.in);
     private final UserService userService = ApplicationContext.getUserService();
     private final CategoryService categoryService = ApplicationContext.getCategoryService();
-    private final BrandService brandService = new BrandService();
+    private final BrandService brandService = ApplicationContext.getBrandService();
     private final ProductService productService = new ProductService();
     private final ShareholderService shareholderService = new ShareholderService();
 
