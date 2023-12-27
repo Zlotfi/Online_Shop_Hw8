@@ -27,6 +27,7 @@ public class CategoryService {
     public void updateCategory() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("please enter your new name category: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new description category: ");
@@ -41,6 +42,7 @@ public class CategoryService {
     public void delete() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         int result = categoryRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
