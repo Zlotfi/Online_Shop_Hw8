@@ -79,7 +79,15 @@ public class Menu {
         System.out.println("Enter your brand name: ");
         String name = scanner.nextLine();
         System.out.println("Enter your brand website: ");
-        String website = scanner.nextLine();
+        String website = null;
+        boolean flag = true;
+        while (flag){
+            website = scanner.nextLine();
+            if (Validation.isValidWebsiteWithRegex(website))
+                flag = false;
+            else
+                System.out.println("please enter a valid website");
+        }
         System.out.println("Enter your brand description: ");
         String description = scanner.nextLine();
 
