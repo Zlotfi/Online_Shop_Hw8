@@ -8,10 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class CategoryRepository {
-
-    JdbcConnection jdbcConnection = new JdbcConnection();
-    Connection connection = jdbcConnection.getConnection();
-    public CategoryRepository() throws SQLException {
+    private final Connection connection;
+    public CategoryRepository(Connection connection){
+        this.connection = connection;
     }
 
 
