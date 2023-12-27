@@ -52,7 +52,14 @@ public class Menu {
                 System.out.println("please enter a valid email");
         }
         System.out.println("Enter your password: ");
-        String password = scanner.nextLine();
+        String password = null;
+        while (flag){
+            password = scanner.nextLine();
+            if (Validation.isValidPasswordWithRegex(password))
+                flag = false;
+            else
+                System.out.println("please enter a valid password");
+        }
 
         User user = new User(null, name, userName, email, password);
         userService.register(user);
