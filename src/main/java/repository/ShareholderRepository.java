@@ -8,11 +8,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ShareholderRepository {
+    private final Connection connection;
 
-    JdbcConnection jdbcConnection = new JdbcConnection();
-    Connection connection = jdbcConnection.getConnection();
-
-    public ShareholderRepository() throws SQLException {
+    public ShareholderRepository(Connection connection){
+        this.connection = connection;
     }
 
     public int save(Shareholder shareholder) throws SQLException {
