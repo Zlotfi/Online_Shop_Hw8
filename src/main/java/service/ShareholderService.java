@@ -22,7 +22,9 @@ public class ShareholderService {
             System.out.println("ERROR");
     }
 
-    public void updateShareholder(int id) throws SQLException {
+    public void updateShareholder() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         System.out.println("please enter your new name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new phoneNumber: ");
