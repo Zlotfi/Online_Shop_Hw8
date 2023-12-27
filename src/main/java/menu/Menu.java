@@ -14,7 +14,7 @@ public class Menu {
     private final CategoryService categoryService = ApplicationContext.getCategoryService();
     private final BrandService brandService = ApplicationContext.getBrandService();
     private final ProductService productService = ApplicationContext.getProductService();
-    private final ShareholderService shareholderService = new ShareholderService();
+    private final ShareholderService shareholderService = ApplicationContext.getShareholderService();
 
     public Menu() throws SQLException {
     }
