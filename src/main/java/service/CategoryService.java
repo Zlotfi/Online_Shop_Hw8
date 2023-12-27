@@ -38,7 +38,9 @@ public class CategoryService {
             System.out.println("ERROR");
     }
 
-    public void delete(int id) throws SQLException {
+    public void delete() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         int result = categoryRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
