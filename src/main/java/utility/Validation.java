@@ -19,4 +19,9 @@ public class Validation {
         Pattern pattern = Pattern.compile("^(ftp|http|https):\\/\\/[^ \"]+$");
         return website.matches(pattern.pattern());
     }
+
+    public static boolean isValidPhoneNumberWithRegex(String phoneNumber){
+        Pattern pattern = Pattern.compile("^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$");
+        return phoneNumber.matches(pattern.pattern());
+    }
 }
