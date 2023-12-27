@@ -14,4 +14,9 @@ public class Validation {
                 ("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,10}$");
         return password.matches(pattern.pattern());
     }
+
+    public static boolean isValidWebsiteWithRegex(String website){
+        Pattern pattern = Pattern.compile("^(ftp|http|https):\\/\\/[^ \"]+$");
+        return website.matches(pattern.pattern());
+    }
 }
