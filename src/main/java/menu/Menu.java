@@ -2,6 +2,7 @@ package menu;
 
 import entity.*;
 import service.*;
+import utility.ApplicationContext;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class Menu {
 
     private final Scanner scanner = new Scanner(System.in);
-    private final UserService userService = new UserService();
+    private final UserService userService = ApplicationContext.getUserService();
     private final CategoryService categoryService = new CategoryService();
     private final BrandService brandService = new BrandService();
     private final ProductService productService = new ProductService();
