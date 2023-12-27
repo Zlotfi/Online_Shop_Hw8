@@ -53,10 +53,11 @@ public class Menu {
         }
         System.out.println("Enter your password: ");
         String password = null;
-        while (flag){
+        boolean flag1 = true;
+        while (flag1){
             password = scanner.nextLine();
             if (Validation.isValidPasswordWithRegex(password))
-                flag = false;
+                flag1 = false;
             else
                 System.out.println("please enter a valid password");
         }
