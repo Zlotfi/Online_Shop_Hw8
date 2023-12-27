@@ -123,7 +123,14 @@ public class Menu {
                 System.out.println("please enter a valid phone number");
         }
         System.out.println("Enter your nationalCode: ");
-        String nationalCode = scanner.nextLine();
+        String nationalCode = null;
+        while (flag){
+            nationalCode = scanner.nextLine();
+            if (Validation.isValidNationalCodeWithRegex(nationalCode))
+                flag = false;
+            else
+                System.out.println("please enter a valid national code");
+        }
 
         Shareholder shareholder = new Shareholder(null, name, phoneNumber, nationalCode);
         shareholderService.register(shareholder);
