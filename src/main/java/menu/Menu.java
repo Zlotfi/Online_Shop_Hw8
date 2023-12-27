@@ -129,8 +129,8 @@ public class Menu {
                         int number = scanner.nextInt();
                         scanner.nextLine();
                         switch (number) {
-                            case 1 -> userService.updateUser(user.getId());
-                            case 2 -> userService.delete(user.getId());
+                            case 1 -> userService.updateUser();
+                            case 2 -> userService.delete();
                             case 3 -> isTrue = false;
                             default -> System.out.println("ERROR");
                         }
