@@ -25,6 +25,7 @@ public class BrandService {
     public void updateBrand() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("please enter your new brand name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new brand website: ");
@@ -41,6 +42,7 @@ public class BrandService {
     public void delete() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         int result = brandRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
