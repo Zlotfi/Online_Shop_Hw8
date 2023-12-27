@@ -113,7 +113,15 @@ public class Menu {
         System.out.println("Enter your shareholder name: ");
         String name = scanner.nextLine();
         System.out.println("Enter your shareholder phoneNumber: ");
-        String phoneNumber = scanner.nextLine();
+        String phoneNumber = null;
+        boolean flag = true;
+        while (flag){
+            phoneNumber = scanner.nextLine();
+            if (Validation.isValidPhoneNumberWithRegex(phoneNumber))
+                flag = false;
+            else
+                System.out.println("please enter a valid phone number");
+        }
         System.out.println("Enter your nationalCode: ");
         String nationalCode = scanner.nextLine();
 
