@@ -24,7 +24,9 @@ public class CategoryService {
             System.out.println("ERROR");
     }
 
-    public void updateCategory(int id) throws SQLException {
+    public void updateCategory() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         System.out.println("please enter your new name category: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new description category: ");
