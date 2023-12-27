@@ -25,6 +25,7 @@ public class ProductService {
     public void updateProduct() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("please enter your new name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new createDate: ");
@@ -44,6 +45,7 @@ public class ProductService {
     public void delete() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         int result = productRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
