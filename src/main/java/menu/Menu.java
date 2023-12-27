@@ -125,10 +125,11 @@ public class Menu {
         }
         System.out.println("Enter your nationalCode: ");
         String nationalCode = null;
-        while (flag){
+        boolean flag1 = true;
+        while (flag1){
             nationalCode = scanner.nextLine();
             if (Validation.isValidNationalCodeWithRegex(nationalCode))
-                flag = false;
+                flag1 = false;
             else
                 System.out.println("please enter a valid national code");
         }
