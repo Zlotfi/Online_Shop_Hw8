@@ -22,7 +22,9 @@ public class BrandService {
             System.out.println("ERROR");
     }
 
-    public void updateBrand(int id) throws SQLException {
+    public void updateBrand() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         System.out.println("please enter your new brand name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new brand website: ");
