@@ -41,7 +41,9 @@ public class ProductService {
             System.out.println("OOps!?");
     }
 
-    public void delete(int id) throws SQLException {
+    public void delete() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         int result = productRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
