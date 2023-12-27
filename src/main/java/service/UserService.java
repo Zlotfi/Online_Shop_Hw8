@@ -28,7 +28,9 @@ public class UserService {
         return user;
     }
 
-    public void updateUser(int id) throws SQLException {
+    public void updateUser() throws SQLException {
+        System.out.println("id: ");
+        int id = scanner.nextInt();
         System.out.println("please enter your new name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new userName: ");
@@ -44,7 +46,9 @@ public class UserService {
             System.out.println("ERROR!");
     }
 
-    public void delete(int id) throws SQLException {
+    public void delete() throws SQLException {
+        System.out.println("id:");
+        int id = scanner.nextInt();
         int result = userRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
