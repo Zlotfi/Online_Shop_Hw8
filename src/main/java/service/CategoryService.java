@@ -11,9 +11,10 @@ public class CategoryService {
 
     Scanner scanner = new Scanner(System.in);
 
-    private final CategoryRepository categoryRepository = new CategoryRepository();
+    private final CategoryRepository categoryRepository;
 
-    public CategoryService() throws SQLException {
+    public CategoryService(CategoryRepository categoryRepository){
+        this.categoryRepository = categoryRepository;
     }
 
     public void register(Category category) throws SQLException {
