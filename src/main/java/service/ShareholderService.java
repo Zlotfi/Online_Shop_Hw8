@@ -9,9 +9,10 @@ import java.util.Scanner;
 public class ShareholderService {
 
     Scanner scanner = new Scanner(System.in);
-    private final ShareholderRepository shareholderRepository = new ShareholderRepository();
+    private final ShareholderRepository shareholderRepository;
 
-    public ShareholderService() throws SQLException {
+    public ShareholderService(ShareholderRepository shareholderRepository){
+        this.shareholderRepository = shareholderRepository;
     }
 
     public void register(Shareholder shareholder) throws SQLException {
