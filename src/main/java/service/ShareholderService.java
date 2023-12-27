@@ -25,6 +25,7 @@ public class ShareholderService {
     public void updateShareholder() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         System.out.println("please enter your new name: ");
         String name = scanner.nextLine();
         System.out.println("please enter your new phoneNumber: ");
@@ -42,6 +43,7 @@ public class ShareholderService {
     public void delete() throws SQLException {
         System.out.println("id: ");
         int id = scanner.nextInt();
+        scanner.nextLine();
         int result = shareholderRepository.delete(id);
         if (result != 0)
             System.out.println("successfully deleted from database");
