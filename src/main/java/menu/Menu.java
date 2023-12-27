@@ -3,6 +3,7 @@ package menu;
 import entity.*;
 import service.*;
 import utility.ApplicationContext;
+import utility.Validation;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -41,7 +42,15 @@ public class Menu {
         System.out.println("Enter your userName: ");
         String userName = scanner.nextLine();
         System.out.println("Enter your email: ");
-        String email = scanner.nextLine();
+        String email = null;
+        boolean flag = true;
+        while (flag){
+            email = scanner.nextLine();
+            if (Validation.isValidEmailWithRegex(email))
+                flag = false;
+            else
+                System.out.println("please enter a valid email");
+        }
         System.out.println("Enter your password: ");
         String password = scanner.nextLine();
 
